@@ -5,4 +5,4 @@ steps:
       - hello_world.txt
     agents:
       # Upload pipeline into the current agent queue.
-      - queue=${PIPELINE_QUEUE:-${BUILDKITE_AGENT_META_DATA_QUEUE}}
+      - queue=${PIPELINE_QUEUE?}
