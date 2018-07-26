@@ -5,4 +5,4 @@ steps:
       - hello_world.txt
     agents:
       # Upload pipeline into the current agent queue.
-      - queue=${PIPELINE_QUEUE?}
+      - queue=${PIPELINE_QUEUE?Pipeline target queue is not set.}
