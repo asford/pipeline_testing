@@ -1,0 +1,7 @@
+steps:
+  command: |
+    echo hello > hello_world.txt
+  artifacts:
+    - hello_world.txt
+  agents:
+    - queue=${BUILDKITE_QUEUE:-default}
