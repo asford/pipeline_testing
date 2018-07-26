@@ -4,4 +4,5 @@ steps:
     artifact_paths:
       - hello_world.txt
     agents:
-      - queue=${BUILDKITE_QUEUE:-default}
+      # Upload pipeline into the current agent queue.
+      - queue=${PIPELINE_QUEUE:-${BUILDKITE_AGENT_META_DATA_QUEUE}}
