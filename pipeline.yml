@@ -5,7 +5,7 @@ steps:
       echo 'touch bin/hello' > logs/build/hello.txt
       touch bin/hello
     plugins:
-      uw-ipd/rsync#d7c64c0:
+      uw-ipd/rsync#2bffd7a:
         post:
          - "-Rrv bin buildbot@fw.bakerlab.org:~/test_pipeline/${BUILDKITE_BUILD_NUMBER}"
          - "-Rrv logs/*/*.txt buildbot@fw.bakerlab.org:~/test_pipeline/${BUILDKITE_BUILD_NUMBER}/$${BUILDKITE_JOB_ID}"
