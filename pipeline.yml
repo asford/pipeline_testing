@@ -8,4 +8,4 @@ steps:
       uw-ipd/rsync#d7c64c0:
         post:
          - "-Rrv bin buildbot@fw.bakerlab.org:~/test_pipeline/${BUILDKITE_BUILD_NUMBER}"
-         - "-Rrv logs/*/*.txt buildbot@fw.bakerlab.org:~/test_pipeline/$${BUILDKITE_JOB_ID}"
+         - "-Rrv logs/*/*.txt buildbot@fw.bakerlab.org:~/test_pipeline/${BUILDKITE_BUILD_NUMBER}/$${BUILDKITE_JOB_ID}"
